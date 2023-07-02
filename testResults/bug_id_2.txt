@@ -1,0 +1,14 @@
+
+> autotests-hw-with-auto-check@1.0.0 test:unit
+> jest
+
+PASS test/unit/example.test.tsx
+PASS test/unit/cart.test.tsx
+PASS test/unit/products.test.tsx
+PASS test/unit/common.test.tsx
+
+Test Suites: 4 passed, 4 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        2.664 s, estimated 4 s
+Ran all test suites.

@@ -63,7 +63,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
                     onChange={onChangeName} />
                 <div className="invalid-feedback">Please provide your name</div>
             </div>
-            <div className="mb-3">
+            <div className="mb-3" >
                 <label htmlFor="f-phone" className="form-label">Phone</label>
                 <input
                     id="f-phone"

@@ -26,7 +26,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             <div className="col-12 col-sm-5 col-lg-4">
                 <Image />
             </div>
-            <div className="col-12 col-sm-7 col-lg-6">
+            <div className="col-12 col-sm-7 col-lg-6 ProductDetailsCard">
                 <h1 className={bem("Name")}>{product.name}</h1>
                 <p className={bem("Description")}>{product.description}</p>
                 <p className={bem("Price", ['fs-3'])}>${product.price}</p>
@@ -35,9 +35,9 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <CartBadge id={product.id} />
                 </p>
                 <dl>
-                    <dt>Color</dt>
+                    <dt className="ProductDetail">Color</dt>
                     <dd className={bem("Color", ['text-capitalize'])}>{product.color}</dd>
-                    <dt>Material</dt>
+                    <dt className="ProductDetail">Material</dt>
                     <dd className={bem("Material", ['text-capitalize'])}>{product.material}</dd>
                 </dl>
             </div>

@@ -18,6 +18,23 @@ const generateProducts = () => {
     return products;
 }
 
+const mockGenerateProducts = () => {
+    const products: Product[] = [];
+
+    for(let id = 0; id < 3; id++) {
+        products.push({
+            id,
+            name: `item ${id}`,
+            description: "mock description",
+            price: 12300,
+            color: "pink",
+            material: "plastic"
+        })
+    }
+
+    return products;
+}
+
 function getShortInfo({ id, name, price }: Product): ProductShortInfo {
     return { id, name, price };
 }
@@ -25,8 +42,18 @@ function getShortInfo({ id, name, price }: Product): ProductShortInfo {
 export const SIZE = 200;
 
 export class ExampleStore {
-    private readonly products: Product[] = generateProducts();
+    private products: Product[];
     private readonly orders: (Order | { id: number })[] = [];
+
+    constructor(mock?: boolean) {
+        if (mock) {
+            this.products = mockGenerateProducts();
+        }
+        else {
+            this.products = generateProducts();
+        }
+    }
+
 
     getAllProducts(bugId: number): ProductShortInfo[] {
         const products = this.products.map(getShortInfo);
