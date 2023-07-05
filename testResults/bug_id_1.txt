@@ -2,11 +2,8 @@
 > autotests-hw-with-auto-check@1.0.0 test:unit
 > jest
 
-PASS test/unit/example.test.tsx
-PASS test/unit/cart.test.tsx
-PASS test/unit/common.test.tsx
 FAIL test/unit/products.test.tsx
-  ● Продукты: › Список продуктов
+  ● Продукты: › Корректное получение списка всех продуктов
 
     expect(received).toStrictEqual(expected) // deep equality
 
@@ -34,17 +31,20 @@ FAIL test/unit/products.test.tsx
         },
       ]
 
-      16 |     const result = store.getAllProducts(getBugId());
-      17 |
-    > 18 |     expect(result).toStrictEqual(mockedData);
+      17 |     const result = store.getAllProducts(getBugId());
+      18 |
+    > 19 |     expect(result).toStrictEqual(mockedData);
          |                    ^
-      19 |   });
-      20 | });
+      20 |   });
+      21 | });
 
-      at Object.<anonymous> (test/unit/products.test.tsx:18:20)
+      at Object.<anonymous> (test/unit/products.test.tsx:19:20)
 
-Test Suites: 1 failed, 3 passed, 4 total
-Tests:       1 failed, 6 passed, 7 total
+PASS test/unit/cart.test.tsx
+PASS test/unit/common.test.tsx
+
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
-Time:        3.631 s, estimated 4 s
+Time:        3.629 s
 Ran all test suites.

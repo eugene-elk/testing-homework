@@ -2,31 +2,30 @@
 > autotests-hw-with-auto-check@1.0.0 test:unit
 > jest
 
-PASS test/unit/example.test.tsx
-PASS test/unit/cart.test.tsx
 PASS test/unit/products.test.tsx
+PASS test/unit/cart.test.tsx
 FAIL test/unit/common.test.tsx
-  ● Общие требования: › при выборе элемента из меню "гамбургера", меню должно закрываться
+  ● Общие требования: › при выборе элемента из меню "гамбургера" - закрытие меню
 
     expect(received).toBe(expected) // Object.is equality
 
     Expected: true
     Received: false
 
-       97 |     await event.click(link);
-       98 |
-    >  99 |     expect(menu.classList.contains('collapse')).toBe(true);
-          |                                                 ^
-      100 |   });
-      101 | });
+      66 |
+      67 |     const menu = container.querySelector(".navbar-collapse");
+    > 68 |     expect(menu.classList.contains('collapse')).toBe(true);
+         |                                                 ^
+      69 |   });
+      70 | });
 
-      at test/unit/common.test.tsx:99:49
+      at test/unit/common.test.tsx:68:49
       at step (test/unit/common.test.tsx:33:23)
       at Object.next (test/unit/common.test.tsx:14:53)
       at fulfilled (test/unit/common.test.tsx:5:58)
 
-Test Suites: 1 failed, 3 passed, 4 total
-Tests:       1 failed, 6 passed, 7 total
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
-Time:        2.514 s, estimated 3 s
+Time:        2.288 s
 Ran all test suites.

@@ -2,7 +2,6 @@
 > autotests-hw-with-auto-check@1.0.0 test:unit
 > jest
 
-PASS test/unit/example.test.tsx
 FAIL test/unit/cart.test.tsx
   ● Корзина: › Добавление двух элементов одного товара
 
@@ -24,8 +23,8 @@ FAIL test/unit/cart.test.tsx
 PASS test/unit/products.test.tsx
 PASS test/unit/common.test.tsx
 
-Test Suites: 1 failed, 3 passed, 4 total
-Tests:       1 failed, 6 passed, 7 total
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
-Time:        2.478 s, estimated 3 s
+Time:        2.153 s
 Ran all test suites.

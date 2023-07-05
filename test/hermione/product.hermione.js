@@ -5,6 +5,7 @@ describe("Страница продука:", async function () {
     const puppeteer = await browser.getPuppeteer();
     const [page] = await puppeteer.pages();
 
+    await page.setViewport({ width: 1440, height: 5000 });
     await browser.url("http://localhost:3000/hw/store/");
     await page.goto("http://localhost:3000/hw/store/catalog");
 
@@ -34,6 +35,4 @@ describe("Страница продука:", async function () {
       ],
     });
   });
-
-
 });
